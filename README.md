@@ -1,0 +1,2 @@
+# HelloWorldPlugin
+A sample Plugin
