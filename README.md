@@ -1,24 +1,16 @@
-# HelloWorldPlugin
-A intellij plugin sample, built with gradle.
+# Intellij Plugin 开发 —— Hello World
 
-### 参考:
-
-* [项目添加 Gradle 支持](http://www.jetbrains.org/intellij/sdk/docs/tutorials/build_system/prerequisites.html#add-gradle-support-from-scratch)
-
-* [JetBrains/gradle-intellij-plugin 项目](https://github.com/JetBrains/gradle-intellij-plugin)
-
-* [✨ 快速入门教程](https://moxun.me/archives/28)
-
-### 配置开发环境
+## 配置开发环境
 * [获取社区版 IntelliJ IDEA 的源码](http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/setting_up_environment.html)
 
-* 直接使用安装的 IntelliJ IDEA／Android Studio 环境
+* 直接使用已安装的 IntelliJ IDEA／Android Studio 环境
 
-### 新建项目
+## 新建项目
 
-为了方便插件添加第三方依赖，项目采用 gradle 方式构建。
+* 为了方便项目添加第三方依赖，项目采用 gradle 方式构建
+* 使用 Kotlin 开发
 
-#### 过程：
+### 过程：
 
 通过 Gradle 构建项目，添加 Kotlin 支持（如下图）
 
@@ -73,7 +65,7 @@ dependencies {
 
 ![](http://7xsi11.com1.z0.glb.clouddn.com/kotlin-dev-plugin-1-002.png)
 
-在 src/main/resources/ 目录下添加 META-INF/plugin.xml，修改相关信息，其中 id 等信息需要修改，否则可能出现无法调试的情况。
+在 src/main/resources/ 目录下添加 META-INF/plugin.xml，修改相关信息（重要，尤其是 id）。
 
 ![](http://7xsi11.com1.z0.glb.clouddn.com/kotlin-dev-plugin-1-003.png)
 
@@ -190,5 +182,12 @@ intellij {
 
 ![](http://7xsi11.com1.z0.glb.clouddn.com/kotlin-dev-plugin-1-013.png)
 
+## Thanks
+
+* [项目添加 Gradle 支持](http://www.jetbrains.org/intellij/sdk/docs/tutorials/build_system/prerequisites.html#add-gradle-support-from-scratch)
+
+* [JetBrains/gradle-intellij-plugin](https://github.com/JetBrains/gradle-intellij-plugin)
+
+* [Intellij IDEA 插件开发快速入门](https://moxun.me/archives/28)
 
 
