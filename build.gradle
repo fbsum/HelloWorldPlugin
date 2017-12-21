@@ -1,8 +1,8 @@
 buildscript {
-    ext.kotlin_version = '1.1.4-2'
+    ext.kotlin_version = '1.2.0'
 
     repositories {
-        mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -10,7 +10,7 @@ buildscript {
 }
 
 plugins {
-    id "org.jetbrains.intellij" version "0.2.16"
+    id "org.jetbrains.intellij" version "0.2.17"
 }
 
 apply plugin: 'org.jetbrains.intellij'
@@ -30,7 +30,7 @@ compileTestKotlin {
 }
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 group 'com.fbsum.plugin'
