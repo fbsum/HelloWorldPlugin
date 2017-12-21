@@ -20,10 +20,10 @@
 
 ```gradle
 buildscript {
-    ext.kotlin_version = '1.1.4-2'
+    ext.kotlin_version = '1.2.0'
 
     repositories {
-        mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -31,7 +31,7 @@ buildscript {
 }
 
 plugins {
-    id "org.jetbrains.intellij" version "0.2.16"
+    id "org.jetbrains.intellij" version "0.2.17"
 }
 
 apply plugin: 'org.jetbrains.intellij'
@@ -40,6 +40,7 @@ apply plugin: 'kotlin'
 // 详细配置参数请看：https://github.com/JetBrains/gradle-intellij-plugin#configuration
 intellij {
     localPath '/Applications/IntelliJ IDEA CE.app'
+    intellij.updateSinceUntilBuild false
 }
 
 compileKotlin {
@@ -50,11 +51,11 @@ compileTestKotlin {
 }
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 group 'com.fbsum.plugin'
-version '1.0-SNAPSHOT'
+version '0.0.1'
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
@@ -71,8 +72,8 @@ dependencies {
 
 ```xml
 <idea-plugin>
-  <id>org.jetbrains</id>
-  <name>my_plugin</name>
+  <id>com.fbsum.plugin.hello</id>
+  <name>HelloWorld Plugin</name>
   <version>0.0.1</version>
   <vendor email="dummy" url="dummy">dummy</vendor>
 
